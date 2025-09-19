@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 64px;
+  background: #111;
+  color: #ddd;
+}
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+.footer__brand { font-weight: 800; margin-bottom: 12px; }
+.footer__links { display: flex; gap: 12px; flex-wrap: wrap; }
+.footer__links a { color: #aaa; }
+.footer__copy { margin-top: 8px; font-size: 12px; color: #888; }
+
+
