@@ -7,6 +7,7 @@ export function OsakaProductDetail() {
   const { id } = useParams()
   const [activeTab, setActiveTab] = useState('상세정보')
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
+  const [isFavorite, setIsFavorite] = useState(false)
 
   // 상품 데이터 (실제로는 API에서 가져올 데이터)
   const productData = {
@@ -74,8 +75,14 @@ export function OsakaProductDetail() {
           ←
         </button>
         <div className="nav-actions">
-          <button className="share-btn">📤</button>
-          <button className="favorite-btn">❤️</button>
+          <button className="share-btn"><img src="/src/assets/share.png" alt="Share" /></button>
+          <button 
+            className={`favorite-btn ${isFavorite ? 'favorited' : ''}`}
+            onClick={() => setIsFavorite(!isFavorite)}
+            aria-label={isFavorite ? '즐겨찾기 해제' : '즐겨찾기 추가'}
+          >
+            <img src="/src/assets/Heart.png" alt="Favorite" />
+          </button>
         </div>
       </div>
 
@@ -111,7 +118,6 @@ export function OsakaProductDetail() {
         <h1 className="product-title">{productData.title}</h1>
         
         <div className="review-section">
-          <span className="heart-icon">❤️</span>
           <span className="review-count">{productData.rating} ({productData.reviewCount})</span>
           <button className="review-link">리뷰보기 →</button>
         </div>
