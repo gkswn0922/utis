@@ -1,0 +1,206 @@
+/* 여행 후기글 페이지 스타일 */
+.reviews-page {
+  background-color: white;
+  min-height: 100vh;
+}
+
+/* 헤더 */
+.reviews-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  margin-right: 16px;
+}
+
+.back-button:hover {
+  background-color: #f5f5f5;
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.reviews-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* 정렬 섹션 */
+.sort-section {
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sort-options {
+  display: flex;
+  gap: 8px;
+}
+
+.sort-button {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sort-button:hover {
+  border-color: #0066cc;
+  color: #0066cc;
+}
+
+.sort-button.active {
+  background: #0066cc;
+  border-color: #0066cc;
+  color: white;
+}
+
+/* 리뷰 목록 */
+.reviews-list {
+  padding: 0 20px;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.review-item:hover {
+  background-color: #fafafa;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-content {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.review-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.review-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #999;
+}
+
+.review-author {
+  font-weight: 500;
+}
+
+.review-date {
+  color: #ccc;
+}
+
+.review-stats {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.stat-icon {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+.stat-icon.heart {
+  color: #ff4757;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .reviews-header {
+    padding: 12px 16px;
+  }
+  
+  .reviews-header h1 {
+    font-size: 18px;
+  }
+  
+  .sort-section {
+    padding: 12px 16px;
+  }
+  
+  .reviews-list {
+    padding: 0 16px;
+  }
+  
+  .review-item {
+    padding: 16px 0;
+  }
+  
+  .review-title {
+    font-size: 15px;
+  }
+  
+  .review-stats {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .review-content {
+    margin-right: 0;
+  }
+  
+  .review-stats {
+    align-self: flex-end;
+  }
+}

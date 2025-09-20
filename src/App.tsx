@@ -5,6 +5,8 @@ import { HomePage } from './pages/Home'
 import { ProductListPage } from './pages/ProductList'
 import { ProductDetailPage } from './pages/ProductDetail'
 import { SearchResultsPage } from './pages/SearchResults'
+import { ReviewsPage } from './pages/ReviewsPage'
+import { LoginPage } from './pages/LoginPage'
 
 function Layout() {
   return (
@@ -25,7 +27,9 @@ export default function App() {
         <Route path="/products" element={<ProductListPage />} />
         <Route path="/products/:id" element={<ProductDetailPage />} />
         <Route path="/search" element={<SearchResultsPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
       </Route>
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   )
 }

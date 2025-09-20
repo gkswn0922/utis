@@ -135,7 +135,7 @@ export function ProductListPage() {
 
           {/* 추천 상품 */}
           <div className="search-section">
-            <h3 className="section-title">추천 상품</h3>
+            <h3 className="section-title">오직 유티스에서만!</h3>
             <div className="recommended-products">
               {recommendedProducts.map((product) => (
                 <div key={product.id} className="travel-card">
@@ -145,7 +145,18 @@ export function ProductListPage() {
                   <div className="card-content">
                     <div className="product-info">
                       <h4 className="product-title">{product.title}</h4>
-                      <p className="product-price">{product.price}</p>
+                      <div className="price-container">
+                        <p className="product-price">{product.price}</p>
+                        <div className="delivery-icon">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16,8 20,8 23,11 23,16 16,16"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                          </svg>
+                        </div>
+                        <span className="airport-pickup">공항수령 가능!</span>
+                      </div>
                     </div>
                     <div className="product-meta">
                       <div className="rating-info">

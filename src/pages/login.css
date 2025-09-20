@@ -1,0 +1,290 @@
+.login-page {
+  background-color: white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.back-button, .home-button {
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.home-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-content {
+  padding: 40px 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-title {
+  font-size: 24px; /* 1단계 올림 (22px → 24px) */
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.login-description {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-description p {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.kakao-login-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #FEE500;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.kakao-icon {
+  font-size: 20px;
+}
+
+.google-login-box {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.google-text {
+  display: flex;
+  align-items: center;
+}
+
+.google-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.kakao-promotion {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.promotion-text {
+  flex: 1;
+}
+
+.promotion-small {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.promotion-large {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.promotion-coupon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coupon-text {
+  background-color: #ff6b35;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.coupon-envelope {
+  font-size: 24px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider-text {
+  padding: 0 16px;
+  font-size: 12px;
+  color: #999;
+}
+
+.tab-menu {
+  display: flex;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background-color: white;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.tab-button.active {
+  background-color: #333;
+  color: white;
+}
+
+.tab-button:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.tab-button:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.login-form {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.security-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.security-icon {
+  font-size: 14px;
+}
+
+.login-submit-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-links {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.login-links .link {
+  color: #666;
+  text-decoration: none;
+}
+
+.login-links .separator {
+  margin: 0 8px;
+  color: #ddd;
+}

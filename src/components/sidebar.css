@@ -1,0 +1,185 @@
+/* 사이드바 오버레이 */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 320px;
+  height: 100vh;
+  background: white;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더 */
+.sidebar-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  background: #f8f9fa;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+.search-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.close-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.close-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 액션 버튼들 */
+.action-buttons {
+  padding: 0 20px 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.search-button {
+  flex: 1;
+  height: 44px;
+  background: white;
+  border: 1px solid #0066cc;
+  border-radius: 8px;
+  color: #0066cc;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button {
+  flex: 1;
+  height: 44px;
+  background: #0066cc;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 메뉴 섹션들 */
+.menu-sections {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.menu-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  color: #0066cc;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  color: #666;
+}
+
+.chevron {
+  width: 16px;
+  height: 16px;
+  color: #999;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100vw;
+  }
+  
+  .promotion-banner {
+    margin: 16px;
+    padding: 16px;
+  }
+  
+  .action-buttons {
+    padding: 0 16px 16px;
+  }
+  
+  .menu-sections {
+    padding: 0 16px;
+  }
+}

@@ -3,6 +3,7 @@ import { HomePage } from './pages/Home'
 import { ProductListPage } from './pages/ProductList'
 import { ProductDetailPage } from './pages/ProductDetail'
 import { SearchResultsPage } from './pages/SearchResults'
+import { ReviewsPage } from './pages/ReviewsPage'
 import './App.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Route path="/products/:id" element={<ProductDetailPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/search" element={<SearchResultsPage />} />
+      <Route path="/reviews" element={<ReviewsPage />} />
       <Route path="/" element={<HomePage />} />
       <Route path="*" element={<div>404 - Page not found</div>} />
     </Routes>

@@ -1,10 +1,22 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { Sidebar } from '../components/Sidebar'
 import './home.css'
 
 export function HomePage() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  useEffect(() => {
+    // URL 파라미터에서 sidebar=true가 있으면 사이드바 열기
+    if (searchParams.get('sidebar') === 'true') {
+      setIsSidebarOpen(true)
+      // URL에서 파라미터 제거
+      navigate('/', { replace: true })
+    }
+  }, [searchParams, navigate])
 
   return (
     <div className="home-page">
@@ -25,7 +37,7 @@ export function HomePage() {
           </svg>
           <span className="search-placeholder">링톡 일본 이심 30% 할인</span>
         </div>
-        <div className="hamburger-menu">
+        <div className="hamburger-menu" onClick={() => setIsSidebarOpen(true)}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <line x1="3" y1="6" x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -179,7 +191,7 @@ export function HomePage() {
       <div className="reviews-section">
         <div className="reviews-header">
           <h2>여행 후기글</h2>
-          <span className="more-link">더보기 &gt;</span>
+          <span className="more-link" onClick={() => navigate('/reviews')}>더보기 &gt;</span>
         </div>
         <div className="reviews-container">
           <div className="reviews-row">
@@ -279,6 +291,9 @@ export function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* 사이드바 */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </div>
   )
 }
