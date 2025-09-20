@@ -130,8 +130,13 @@
   margin-top: -10px;
 }
 
-/* 인기 검색어 섹션도 추가로 위로 이동 */
+/* 인기 검색어 섹션을 위로 이동 */
 .search-section:nth-child(2) {
+  margin-top: -15px;
+}
+
+/* 추천 상품 섹션을 위로 이동 */
+.search-section:nth-child(3) {
   margin-top: 0px;
 }
 
