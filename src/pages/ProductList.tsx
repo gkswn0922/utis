@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ProductCard } from '../components/ProductCard'
+import { SearchHeader } from '../components/SearchHeader'
 import { products } from '../data/products'
 import './list.css'
 
@@ -64,36 +65,19 @@ export function ProductListPage() {
     setQuery(searchTerm)
   }
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (query.trim()) {
-      // 검색 로직 구현
-      console.log('검색:', query)
-    }
+  const handleSearch = (searchQuery: string) => {
+    console.log('검색:', searchQuery)
+    navigate(`/search?q=${encodeURIComponent(searchQuery)}`)
   }
 
   return (
     <div className="list">
       {/* 검색 헤더 */}
-      <div className="search-header">
-        <button className="back-button" onClick={() => navigate('/')}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <polyline points="15,18 9,12 15,6"/>
-          </svg>
-        </button>
-        <div className="search-bar" onClick={() => navigate('/search')}>
-          <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
-          </svg>
-          <input
-            type="text"
-            placeholder="일본 숙소 특가"
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-          />
-        </div>
-      </div>
+      <SearchHeader 
+        initialQuery={query}
+        placeholder="일본 숙소 특가"
+        onSearch={handleSearch}
+      />
 
       {/* 메인 콘텐츠 */}
       <div className="main-content">

@@ -4,6 +4,7 @@ import { Footer } from './components/Footer'
 import { HomePage } from './pages/Home'
 import { ProductListPage } from './pages/ProductList'
 import { ProductDetailPage } from './pages/ProductDetail'
+import { SearchResultsPage } from './pages/SearchResults'
 
 function Layout() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route index element={<HomePage />} />
         <Route path="/products" element={<ProductListPage />} />
         <Route path="/products/:id" element={<ProductDetailPage />} />
+        <Route path="/search" element={<SearchResultsPage />} />
       </Route>
     </Routes>
   )

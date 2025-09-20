@@ -9,9 +9,9 @@ function App() {
   console.log('App component loaded')
   return (
     <Routes>
-      <Route path="/search" element={<SearchResultsPage />} />
       <Route path="/products/:id" element={<ProductDetailPage />} />
       <Route path="/products" element={<ProductListPage />} />
+      <Route path="/search" element={<SearchResultsPage />} />
       <Route path="/" element={<HomePage />} />
       <Route path="*" element={<div>404 - Page not found</div>} />
     </Routes>
