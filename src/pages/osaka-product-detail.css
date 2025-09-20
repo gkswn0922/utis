@@ -168,6 +168,7 @@
   color: var(--text-primary, #333);
   margin: 0 0 12px 0;
   line-height: 1.4;
+  font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
 }
 
 .review-section {

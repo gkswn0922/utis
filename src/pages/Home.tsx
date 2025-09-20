@@ -20,16 +20,10 @@ export function HomePage() {
 
   return (
     <div className="home-page">
-      {/* 상단 헤더 */}
-      <div className="top-header">
-        <div className="utis-logo">UTIS</div>
-        <div className="paper-plane-icon">
-          <img src="/src/assets/paper-plane.png" alt="Paper Plane" />
-        </div>
-      </div>
 
       {/* 검색 섹션 */}
       <div className="search-section">
+        <div className="utis-logo">UTIS</div>
         <div className="search-bar" onClick={() => navigate('/products')}>
           <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <circle cx="11" cy="11" r="8"/>

@@ -54,7 +54,7 @@
 
 /* 검색 섹션 */
 .home-page .search-section {
-  padding: 6px 20px !important;
+  padding: 6px 40px !important;
   display: flex !important;
   align-items: center !important;
   gap: 16px !important;
@@ -382,6 +382,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
 }
 
 .product-price {

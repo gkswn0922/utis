@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './search-header.css'
 
@@ -6,15 +6,22 @@ interface SearchHeaderProps {
   initialQuery?: string
   placeholder?: string
   onSearch?: (query: string) => void
+  onQueryChange?: (query: string) => void
 }
 
 export function SearchHeader({ 
-  initialQuery = '일본 숙소 특가', 
   placeholder = '일본 숙소 특가',
-  onSearch 
+  onSearch,
+  onQueryChange
 }: SearchHeaderProps) {
   const navigate = useNavigate()
-  const [query, setQuery] = useState(initialQuery)
+  const [query, setQuery] = useState('')
+
+  useEffect(() => {
+    if (onQueryChange) {
+      onQueryChange(query)
+    }
+  }, [query, onQueryChange])
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault()

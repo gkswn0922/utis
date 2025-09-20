@@ -26,7 +26,11 @@
   border-radius: 6px;
 }
 .p-card__body { padding: 12px; display: grid; gap: 6px; }
-.p-card__title { font-weight: 700; line-height: 1.3; }
+.p-card__title { 
+  font-weight: 700; 
+  line-height: 1.3; 
+  font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+}
 .p-card__meta { color: #666; font-size: 12px; }
 .p-card__rating { color: #ffb400; display: flex; gap: 6px; align-items: center; }
 .p-card__price { display: flex; gap: 8px; align-items: baseline; }

@@ -12,6 +12,7 @@ import './list.css'
 export function ProductListPage() {
   const navigate = useNavigate()
   const [query, setQuery] = useState('일본 숙소 특가')
+  const [searchQuery, setSearchQuery] = useState('')
 
   const recentSearches = [
     '일본 숙소 특가',
@@ -28,6 +29,35 @@ export function ProductListPage() {
     '오사카 여행 패키지',
     '후쿠오카 특가 항공권'
   ]
+
+  // 연관 검색어 데이터
+  const getRelatedSearches = (query: string) => {
+    if (!query.trim()) return []
+    
+    const relatedSearchesMap: { [key: string]: string[] } = {
+      '일본': ['일본 숙소 특가', '일본 항공권', '일본 여행 패키지', '일본 eSIM', '일본 교통패스'],
+      '도쿄': ['도쿄 호텔 할인', '도쿄 디즈니랜드', '도쿄 관광지', '도쿄 맛집', '도쿄 쇼핑'],
+      '오사카': ['오사카 여행 패키지', '오사카 유니버설 스튜디오', '오사카 숙소', '오사카 음식', '오사카 관광'],
+      '교토': ['교토 사찰 투어', '교토 전통문화', '교토 한복 체험', '교토 맛집', '교토 숙소'],
+      '후쿠오카': ['후쿠오카 특가 항공권', '후쿠오카 온천', '후쿠오카 맛집', '후쿠오카 관광', '후쿠오카 숙소'],
+      '호텔': ['도쿄 호텔 할인', '오사카 호텔', '교토 호텔', '후쿠오카 호텔', '일본 호텔 패키지'],
+      '항공권': ['일본 항공권', '후쿠오카 특가 항공권', '도쿄 항공권', '오사카 항공권', '교토 항공권'],
+      'eSIM': ['일본 eSIM', '도쿄 eSIM', '오사카 eSIM', '일본 무제한 데이터', '일본 로밍'],
+      '여행': ['일본 여행 패키지', '오사카 여행 패키지', '도쿄 여행', '교토 여행', '후쿠오카 여행']
+    }
+
+    // 입력된 검색어와 관련된 연관 검색어 찾기
+    for (const [keyword, related] of Object.entries(relatedSearchesMap)) {
+      if (query.toLowerCase().includes(keyword.toLowerCase())) {
+        return related
+      }
+    }
+
+    // 기본 연관 검색어
+    return ['일본 숙소 특가', '도쿄 호텔 할인', '오사카 여행 패키지', '일본 eSIM', '일본 항공권']
+  }
+
+  const relatedSearches = getRelatedSearches(searchQuery)
 
   const recommendedProducts = [
     {
@@ -89,6 +119,10 @@ export function ProductListPage() {
     navigate(`/osaka`)
   }
 
+  const handleQueryChange = (query: string) => {
+    setSearchQuery(query)
+  }
+
   return (
     <div className="list">
       {/* 검색 헤더 */}
@@ -96,41 +130,51 @@ export function ProductListPage() {
         initialQuery={query}
         placeholder="일본 숙소 특가"
         onSearch={handleSearch}
+        onQueryChange={handleQueryChange}
       />
 
       {/* 메인 콘텐츠 */}
       <div className="main-content">
         <div className="content-scroll">
-          {/* 최근 검색어 */}
-          <div className="search-section">
-            <h3 className="section-title">최근 검색어</h3>
-            <div className="search-tags-horizontal">
-              {recentSearches.map((search, index) => (
-                <button
-                  key={index}
-                  className="search-tag-chip"
-                  onClick={() => handleSearchClick(search)}
-                >
-                  {search}
-                </button>
-              ))}
-            </div>
-          </div>
+         
 
-          {/* 인기 검색어 */}
+          {/* 검색어 섹션 - 입력이 있으면 연관 검색어, 없으면 인기 검색어 */}
           <div className="search-section">
-            <h3 className="section-title">인기 검색어</h3>
-            <div className="search-tags-wrap">
-              {popularSearches.map((search, index) => (
-                <button
-                  key={index}
-                  className="search-tag-chip"
-                  onClick={() => handleSearchClick(search)}
-                >
-                  {search}
-                </button>
-              ))}
-            </div>
+            {!searchQuery.trim() && (
+              <h3 className="section-title">인기 검색어</h3>
+            )}
+            {searchQuery.trim() ? (
+              <div className="related-searches-list">
+                {relatedSearches.map((search, index) => (
+                  <div
+                    key={index}
+                    className="related-search-item"
+                    onClick={() => handleSearchClick(search)}
+                  >
+                    <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <circle cx="11" cy="11" r="8"/>
+                      <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <span className="search-text">{search}</span>
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <polyline points="9,18 15,12 9,6"/>
+                    </svg>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="search-tags-wrap">
+                {popularSearches.map((search, index) => (
+                  <button
+                    key={index}
+                    className="search-tag-chip"
+                    onClick={() => handleSearchClick(search)}
+                  >
+                    {search}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* 추천 상품 */}
