@@ -1,8 +1,16 @@
 /* Flutter 스타일을 React CSS로 변환 - Home 페이지 전용 */
 .home-page {
-  background-color: white;
+  background-color: var(--bg-secondary, white);
   min-height: 100vh;
   padding-bottom: 0px;
+  transition: background-color 0.3s ease;
+}
+
+/* 헤더 액션 그룹 */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 /* 모든 스타일을 .home-page 하위로 스코프 제한 */
@@ -13,10 +21,10 @@
 /* 상단 헤더 */
 .home-page .top-header {
   padding: 0px 20px 0px 20px !important;
-  background: white !important;
+  background: var(--bg-secondary, white) !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-between !important;
   gap: 8px !important;
   position: sticky !important;
   top: 0 !important;
@@ -27,7 +35,7 @@
 .home-page .utis-logo {
   font-size: 28px;
   font-weight: bold;
-  color: #333333;
+  color: var(--text-primary, #333333);
 }
 
 .home-page .paper-plane-icon {

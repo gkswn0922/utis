@@ -9,6 +9,7 @@ import { OsakaSearchResults } from './pages/OsakaSearchResults'
 import { OsakaProductDetail } from './pages/OsakaProductDetail'
 import { ReviewsPage } from './pages/ReviewsPage'
 import { LoginPage } from './pages/LoginPage'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 function Layout() {
   return (
@@ -23,17 +24,19 @@ function Layout() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="/products" element={<ProductListPage />} />
-        <Route path="/products/:id" element={<ProductDetailPage />} />
-        <Route path="/search" element={<SearchResultsPage />} />
-        <Route path="/osaka" element={<OsakaSearchResults />} />
-        <Route path="/osaka/product/:id" element={<OsakaProductDetail />} />
-        <Route path="/reviews" element={<ReviewsPage />} />
-      </Route>
-      <Route path="/login" element={<LoginPage />} />
-    </Routes>
+    <ThemeProvider>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/products" element={<ProductListPage />} />
+          <Route path="/products/:id" element={<ProductDetailPage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
+          <Route path="/osaka" element={<OsakaSearchResults />} />
+          <Route path="/osaka/product/:id" element={<OsakaProductDetail />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+        </Route>
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </ThemeProvider>
   )
 }
