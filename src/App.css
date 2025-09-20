@@ -5,51 +5,6 @@
   padding-bottom: 80px; /* 하단 네비게이션 공간 */
 }
 
-/* 검색 섹션 */
-.search-section {
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.search-bar {
-  flex: 1;
-  height: 40px;
-  padding: 0 20px;
-  background: white;
-  border: 1.5px solid black;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  cursor: pointer;
-}
-
-.search-icon {
-  width: 20px;
-  height: 20px;
-  color: #999999;
-}
-
-.search-placeholder {
-  color: #666666;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.header-icons {
-  display: flex;
-  gap: 8px;
-}
-
-.icon {
-  width: 29px;
-  height: 29px;
-  color: #666666;
-}
-
 /* 프로모션 배너 */
 .promotion-banner {
   margin: 0 20px;

@@ -6,32 +6,10 @@ function App() {
 
   return (
     <div className="home">
-      {/* 검색 섹션 */}
-      <div className="search-section">
-        <div className="search-bar">
-          <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
-          </svg>
-          <span className="search-placeholder">링톡 일본 이심 30% 할인</span>
-        </div>
-        <div className="header-icons">
-          <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-          </svg>
-          <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="9" cy="21" r="1"/>
-            <circle cx="20" cy="21" r="1"/>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-          </svg>
-        </div>
-      </div>
-
       {/* 프로모션 배너 */}
       <div className="promotion-banner">
         <div className="banner-content">
-          <div className="banner-text">링톡 & 유티스</div>
+          <div className="banner-text">링톡 & 유티스ㄴ</div>
           <div className="banner-button">특가 확인하기</div>
         </div>
       </div>
