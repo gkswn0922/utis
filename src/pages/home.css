@@ -2,7 +2,7 @@
 .home-page {
   background-color: white;
   min-height: 100vh;
-  padding-bottom: 20px !important;
+  padding-bottom: 0px;
 }
 
 /* 모든 스타일을 .home-page 하위로 스코프 제한 */

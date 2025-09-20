@@ -73,32 +73,25 @@ export function ProductListPage() {
   }
 
   return (
-    <div className="search-input-screen">
-      {/* 상단 상태바와 검색바 */}
-      <div className="top-section">
-        <div className="search-header">
-          <button className="back-button" onClick={() => navigate('/')}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <polyline points="15,18 9,12 15,6"/>
-            </svg>
-          </button>
-          
-          <form className="search-form" onSubmit={handleSearchSubmit}>
-            <div className="search-bar">
-              <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="m21 21-4.35-4.35"/>
-              </svg>
-              <input
-                type="text"
-                placeholder="링톡 일본 이심 30% 할인"
-                value={query}
-                onChange={e => setQuery(e.target.value)}
-                className="search-input"
-              />
-            </div>
-          </form>
-
+    <div className="list">
+      {/* 검색 헤더 */}
+      <div className="search-header">
+        <button className="back-button" onClick={() => navigate('/')}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15,18 9,12 15,6"/>
+          </svg>
+        </button>
+        <div className="search-bar" onClick={() => navigate('/search')}>
+          <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input
+            type="text"
+            placeholder="일본 숙소 특가"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+          />
         </div>
       </div>
 

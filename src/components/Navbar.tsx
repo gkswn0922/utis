@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <header className="nav">
       <div className="nav__inner">
-        <Link to="/" className="nav__brand">KTravel</Link>
+        <Link to="/" className="nav__brand">UTIS</Link>
         <nav className="nav__menu">
           <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>홈</NavLink>
           <NavLink to="/products" className={({ isActive }) => isActive ? 'active' : ''}>상품</NavLink>

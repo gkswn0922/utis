@@ -1,10 +1,11 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { getProductById } from '../data/products'
 import { RatingStars } from '../components/RatingStars'
 import './detail.css'
 
 export function ProductDetailPage() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const product = id ? getProductById(id) : undefined
   if (!product) {
     return (
@@ -16,6 +17,15 @@ export function ProductDetailPage() {
   }
   return (
     <div className="detail">
+      {/* 뒤로가기 버튼 */}
+      <div className="detail-header">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15,18 9,12 15,6"/>
+          </svg>
+        </button>
+      </div>
+      
       <div className="detail__title">
         <h1>{product.title}</h1>
         <div className="detail__subtitle">{product.city} · {product.country}</div>
