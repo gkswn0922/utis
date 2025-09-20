@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import { ProductCard } from '../components/ProductCard'
 import { SearchHeader } from '../components/SearchHeader'
 import { products } from '../data/products'
+import thumbnail1 from '../assets/썸네일-1.png'
+import thumbnail2 from '../assets/썸네일-2.png'
+import thumbnail3 from '../assets/썸네일-3.png'
+import thumbnail4 from '../assets/썸네일-4.png'
 import './list.css'
 
 export function ProductListPage() {
@@ -28,36 +32,51 @@ export function ProductListPage() {
   const recommendedProducts = [
     {
       id: 'r1',
-      title: '대만 eSIM 특가',
+      title: '일본 eSIM 5G 무제한',
       price: '3,500원',
       discount: '15% 할인',
       rating: 4.34,
       reviews: 76,
       company: '주식회사 링톡',
       color: '#5F7CF6',
-      icon: '📱'
+      icon: '📱',
+      thumbnail: thumbnail1
     },
     {
       id: 'r2',
-      title: '일본 여행 패키지',
+      title: '대만 eSIM 5G 무제한',
       price: '3,500원',
       discount: '15% 할인',
       rating: 4.34,
       reviews: 76,
       company: '주식회사 링톡',
       color: '#059669',
-      icon: '✈️'
+      icon: '✈️',
+      thumbnail: thumbnail2
     },
     {
       id: 'r3',
-      title: '유럽 호텔 할인',
+      title: '유럽 eSIM 5G 무제한',
       price: '3,500원',
       discount: '15% 할인',
       rating: 4.34,
       reviews: 76,
       company: '주식회사 링톡',
       color: '#7C3AED',
-      icon: '🏨'
+      icon: '🏨',
+      thumbnail: thumbnail3
+    },
+    {
+      id: 'r4',
+      title: '미국 eSIM 5G 무제한',
+      price: '3,500원',
+      discount: '15% 할인',
+      rating: 4.34,
+      reviews: 76,
+      company: '주식회사 링톡',
+      color: '#DC2626',
+      icon: '🇺🇸',
+      thumbnail: thumbnail4
     }
   ]
 
@@ -121,9 +140,7 @@ export function ProductListPage() {
               {recommendedProducts.map((product) => (
                 <div key={product.id} className="travel-card">
                   <div className="card-image">
-                    <div className="image-placeholder">
-                      <span className="product-icon">{product.icon}</span>
-                    </div>
+                    <img src={product.thumbnail} alt={product.title} className="thumbnail-image" />
                   </div>
                   <div className="card-content">
                     <div className="product-info">

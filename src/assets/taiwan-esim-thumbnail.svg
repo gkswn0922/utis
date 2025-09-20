@@ -1,0 +1,39 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="200" height="200" fill="#F0FDF4"/>
+  
+  <!-- 대만 국기 -->
+  <rect x="18" y="18" width="24" height="16" rx="2" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="18" y="18" width="24" height="8" fill="#FE0000"/>
+  <rect x="18" y="26" width="24" height="8" fill="#000095"/>
+  <circle cx="30" cy="30" r="3" fill="#FE0000"/>
+  
+  <!-- 대만 텍스트 -->
+  <text x="30" y="50" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937" text-anchor="middle">대만</text>
+  
+  <!-- RingTalk 로고 -->
+  <text x="170" y="30" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#059669" text-anchor="end">RingTalk</text>
+  
+  <!-- 5G 배지 -->
+  <rect x="150" y="160" width="30" height="20" rx="10" fill="#059669"/>
+  <text x="165" y="172" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">5G</text>
+  
+  <!-- eSIM 배지 -->
+  <rect x="150" y="185" width="30" height="20" rx="10" fill="#059669"/>
+  <text x="165" y="197" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">eSIM</text>
+  
+  <!-- 스마트폰 아이콘 -->
+  <rect x="80" y="60" width="40" height="80" rx="6" fill="#1F2937"/>
+  <rect x="85" y="65" width="30" height="50" rx="2" fill="white"/>
+  <rect x="90" y="70" width="20" height="15" rx="1" fill="#059669"/>
+  <text x="100" y="90" font-family="Arial, sans-serif" font-size="8" fill="#1F2937" text-anchor="middle">QR</text>
+  <text x="100" y="100" font-family="Arial, sans-serif" font-size="6" fill="#1F2937" text-anchor="middle">RingTalk</text>
+  
+  <!-- 대만 풍경 요소 -->
+  <rect x="20" y="120" width="15" height="10" rx="2" fill="#F59E0B" opacity="0.7"/>
+  <rect x="40" y="110" width="12" height="8" rx="1" fill="#F59E0B" opacity="0.7"/>
+  <rect x="60" y="125" width="10" height="6" rx="1" fill="#F59E0B" opacity="0.7"/>
+  <rect x="140" y="100" width="14" height="9" rx="1" fill="#F59E0B" opacity="0.7"/>
+  <rect x="160" y="115" width="11" height="7" rx="1" fill="#F59E0B" opacity="0.7"/>
+  <rect x="180" y="105" width="13" height="8" rx="1" fill="#F59E0B" opacity="0.7"/>
+</svg>
