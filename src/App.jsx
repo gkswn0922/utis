@@ -16,6 +16,8 @@ function App() {
       <Route path="/reviews" element={<ReviewsPage />} />
       <Route path="/" element={<HomePage />} />
       <Route path="*" element={<div>404 - Page not found</div>} />
+      <Route path="/osaka" element={<OsakaSearchResults />} />
+      <Route path="/osaka/product/:id" element={<OsakaProductDetail />} />
     </Routes>
   )
 }

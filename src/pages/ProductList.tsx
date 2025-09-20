@@ -86,7 +86,7 @@ export function ProductListPage() {
 
   const handleSearch = (searchQuery: string) => {
     console.log('검색:', searchQuery)
-    navigate(`/search?q=${encodeURIComponent(searchQuery)}`)
+    navigate(`/osaka`)
   }
 
   return (
@@ -138,7 +138,7 @@ export function ProductListPage() {
             <h3 className="section-title">오직 유티스에서만!</h3>
             <div className="recommended-products">
               {recommendedProducts.map((product) => (
-                <div key={product.id} className="travel-card">
+                <div key={product.id} className="travel-card" onClick={() => navigate(`/osaka/product/${product.id}`)}>
                   <div className="card-image">
                     <img src={product.thumbnail} alt={product.title} className="thumbnail-image" />
                   </div>

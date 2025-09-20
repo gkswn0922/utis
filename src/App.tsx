@@ -5,6 +5,8 @@ import { HomePage } from './pages/Home'
 import { ProductListPage } from './pages/ProductList'
 import { ProductDetailPage } from './pages/ProductDetail'
 import { SearchResultsPage } from './pages/SearchResults'
+import { OsakaSearchResults } from './pages/OsakaSearchResults'
+import { OsakaProductDetail } from './pages/OsakaProductDetail'
 import { ReviewsPage } from './pages/ReviewsPage'
 import { LoginPage } from './pages/LoginPage'
 
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/products" element={<ProductListPage />} />
         <Route path="/products/:id" element={<ProductDetailPage />} />
         <Route path="/search" element={<SearchResultsPage />} />
+        <Route path="/osaka" element={<OsakaSearchResults />} />
+        <Route path="/osaka/product/:id" element={<OsakaProductDetail />} />
         <Route path="/reviews" element={<ReviewsPage />} />
       </Route>
       <Route path="/login" element={<LoginPage />} />

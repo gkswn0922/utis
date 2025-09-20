@@ -23,7 +23,7 @@ export function SearchHeader({
         onSearch(query)
       } else {
         // 기본 동작: 검색 결과 페이지로 이동 (검색어를 URL 파라미터로 전달)
-        navigate(`/search?q=${encodeURIComponent(query)}`)
+        navigate(`/osaka`)
       }
     }
   }

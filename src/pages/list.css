@@ -116,6 +116,7 @@
   height: 100%;
   overflow-y: auto;
   padding-bottom: 20px;
+  margin-top: 30px;
 }
 
 /* 검색 섹션 */
@@ -131,7 +132,7 @@
 
 /* 인기 검색어 섹션도 추가로 위로 이동 */
 .search-section:nth-child(2) {
-  margin-top: -10px;
+  margin-top: 0px;
 }
 
 .section-title {
