@@ -7,7 +7,7 @@ export function HomePage() {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   return (
-    <div className="home">
+    <div className="home-page">
       {/* 상단 헤더 */}
       <div className="top-header">
         <div className="utis-logo">UTIS</div>

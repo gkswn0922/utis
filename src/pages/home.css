@@ -1,12 +1,17 @@
-/* Flutter 스타일을 React CSS로 변환 */
-.home {
+/* Flutter 스타일을 React CSS로 변환 - Home 페이지 전용 */
+.home-page {
   background-color: white;
   min-height: 100vh;
   padding-bottom: 20px !important;
 }
 
+/* 모든 스타일을 .home-page 하위로 스코프 제한 */
+.home-page * {
+  box-sizing: border-box;
+}
+
 /* 상단 헤더 */
-.top-header {
+.home-page .top-header {
   padding: 0px 20px 0px 20px !important;
   background: white !important;
   display: flex !important;
@@ -18,13 +23,13 @@
   z-index: 100 !important;
 }
 
-.utis-logo {
+.home-page .utis-logo {
   font-size: 28px;
   font-weight: bold;
   color: #333333;
 }
 
-.paper-plane-icon {
+.home-page .paper-plane-icon {
   width: 47px;
   height: 47px;
   display: flex;
@@ -32,14 +37,14 @@
   justify-content: center;
 }
 
-.paper-plane-icon img {
+.home-page .paper-plane-icon img {
   width: 47px;
   height: 47px;
   object-fit: contain;
 }
 
 /* 검색 섹션 */
-.search-section {
+.home-page .search-section {
   padding: 6px 20px !important;
   display: flex !important;
   align-items: center !important;
@@ -86,13 +91,6 @@
   font-size: 14px;
 }
 
-/* 프로모션 배너 */
-.search-section {
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
 
 .search-bar {
   flex: 1;
@@ -599,3 +597,5 @@
     font-size: 10px;
   }
 }
+
+/* Home 페이지 CSS 스코프 종료 - 이 위의 모든 스타일은 .home-page 하위에서만 적용됩니다 */
