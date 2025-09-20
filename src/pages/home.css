@@ -21,6 +21,7 @@
   position: sticky !important;
   top: 0 !important;
   z-index: 100 !important;
+  margin-top: 8px;
 }
 
 .home-page .utis-logo {
@@ -49,7 +50,7 @@
   display: flex !important;
   align-items: center !important;
   gap: 16px !important;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 .search-bar {
@@ -265,10 +266,8 @@
   color: #5F7CF6;
 }
 
-.category-item span {
-  font-size: 12px;
-  font-weight: 500;
-  color: #333333;
+.category-item:nth-child(2) {
+  transform: translateY(1px);
 }
 
 /* 인기 상품 섹션 */
@@ -450,7 +449,7 @@
 
 .reviews-row {
   display: flex;
-  gap: 0px;
+  gap: -2px;
   justify-content: space-between;
 }
 
@@ -461,9 +460,9 @@
   cursor: pointer;
   position: relative;
   background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   aspect-ratio: 2/3;
-  max-width: calc(50% - 0px);
+  max-width: 50%;
+  border: none;
 }
 
 .review-image {
@@ -472,7 +471,7 @@
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
-  background-color: #f0f0f0;
+  transform: scale(1.05);
 }
 
 .review-image img {
