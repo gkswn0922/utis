@@ -36,16 +36,16 @@ export function SearchHeader({
   }
 
   return (
-    <div className="search-header">
-      <button className="back-button" onClick={() => navigate('/')}>
+    <div className="header-search-header">
+      <button className="header-back-button" onClick={() => navigate('/')}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <polyline points="15,18 9,12 15,6"/>
         </svg>
       </button>
       
-      <form className="search-form" onSubmit={handleSearchSubmit}>
-        <div className="search-bar">
-          <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <form className="header-search-form" onSubmit={handleSearchSubmit}>
+        <div className="header-search-bar">
+          <svg className="header-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <circle cx="11" cy="11" r="8"/>
             <path d="m21 21-4.35-4.35"/>
           </svg>
@@ -54,7 +54,7 @@ export function SearchHeader({
             placeholder={placeholder}
             value={query}
             onChange={e => setQuery(e.target.value)}
-            className="search-input"
+            className="header-search-input"
           />
         </div>
       </form>

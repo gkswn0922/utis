@@ -124,7 +124,7 @@ export function ProductListPage() {
   }
 
   return (
-    <div className="list">
+    <div className="list-page">
       {/* 검색 헤더 */}
       <SearchHeader 
         initialQuery={query}
@@ -134,40 +134,40 @@ export function ProductListPage() {
       />
 
       {/* 메인 콘텐츠 */}
-      <div className="main-content">
-        <div className="content-scroll">
+      <div className="list-main-content">
+        <div className="list-content-scroll">
          
 
           {/* 검색어 섹션 - 입력이 있으면 연관 검색어, 없으면 인기 검색어 */}
-          <div className="search-section">
+          <div className="list-search-section">
             {!searchQuery.trim() && (
-              <h3 className="section-title">인기 검색어</h3>
+              <h3 className="list-section-title">인기 검색어</h3>
             )}
             {searchQuery.trim() ? (
-              <div className="related-searches-list">
+              <div className="list-related-searches-list">
                 {relatedSearches.map((search, index) => (
                   <div
                     key={index}
-                    className="related-search-item"
+                    className="list-related-search-item"
                     onClick={() => handleSearchClick(search)}
                   >
-                    <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <svg className="list-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <circle cx="11" cy="11" r="8"/>
                       <path d="m21 21-4.35-4.35"/>
                     </svg>
-                    <span className="search-text">{search}</span>
-                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <span className="list-search-text">{search}</span>
+                    <svg className="list-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <polyline points="9,18 15,12 9,6"/>
                     </svg>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="search-tags-wrap">
+              <div className="list-search-tags-wrap">
                 {popularSearches.map((search, index) => (
                   <button
                     key={index}
-                    className="search-tag-chip"
+                    className="list-search-tag-chip"
                     onClick={() => handleSearchClick(search)}
                   >
                     {search}
@@ -178,20 +178,20 @@ export function ProductListPage() {
           </div>
 
           {/* 추천 상품 */}
-          <div className="search-section">
-            <h3 className="section-title">오직 유티스에서만!</h3>
-            <div className="recommended-products">
+          <div className="list-search-section">
+            <h3 className="list-section-title">오직 유티스에서만!</h3>
+            <div className="list-recommended-products">
               {recommendedProducts.map((product) => (
-                <div key={product.id} className="travel-card" onClick={() => navigate(`/osaka/product/${product.id}`)}>
-                  <div className="card-image">
-                    <img src={product.thumbnail} alt={product.title} className="thumbnail-image" />
+                <div key={product.id} className="list-travel-card" onClick={() => navigate(`/osaka/product/${product.id}`)}>
+                  <div className="list-card-image">
+                    <img src={product.thumbnail} alt={product.title} className="list-thumbnail-image" />
                   </div>
-                  <div className="card-content">
-                    <div className="product-info">
-                      <h4 className="product-title">{product.title}</h4>
-                      <div className="price-container">
-                        <p className="product-price">{product.price}</p>
-                        <div className="delivery-icon">
+                  <div className="list-card-content">
+                    <div className="list-product-info">
+                      <h4 className="list-product-title">{product.title}</h4>
+                      <div className="list-price-container">
+                        <p className="list-product-price">{product.price}</p>
+                        <div className="list-delivery-icon">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <rect x="1" y="3" width="15" height="13"/>
                             <polygon points="16,8 20,8 23,11 23,16 16,16"/>
@@ -199,19 +199,19 @@ export function ProductListPage() {
                             <circle cx="18.5" cy="18.5" r="2.5"/>
                           </svg>
                         </div>
-                        <span className="airport-pickup">공항수령 가능!</span>
+                        <span className="list-airport-pickup">공항수령 가능!</span>
                       </div>
                     </div>
-                    <div className="product-meta">
-                      <div className="rating-info">
-                        <svg className="product-star-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <div className="list-product-meta">
+                      <div className="list-rating-info">
+                        <svg className="list-product-star-icon" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
-                        <span className="rating-text">{product.rating}({product.reviews})</span>
+                        <span className="list-rating-text">{product.rating}({product.reviews})</span>
                       </div>
-                      <div className="company-info">
-                        <span className="company-name">{product.company}</span>
-                        <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <div className="list-company-info">
+                        <span className="list-company-name">{product.company}</span>
+                        <svg className="list-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                           <polyline points="9,18 15,12 9,6"/>
                         </svg>
                       </div>

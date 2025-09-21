@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './osaka-search-results.css'
 
-export function OsakaSearchResults() {
+function OsakaSearchResults() {
   const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('전체')
 
@@ -128,3 +128,5 @@ export function OsakaSearchResults() {
     </div>
   )
 }
+
+export default OsakaSearchResults

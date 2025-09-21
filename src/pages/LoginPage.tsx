@@ -12,22 +12,22 @@ export function LoginPage() {
   return (
     <div className="login-page">
       {/* 헤더 */}
-      <div className="login-header">
+      <div className="login-page-header">
         <button 
           onClick={() => navigate('/?sidebar=true')}
-          className="back-button"
+          className="login-back-button"
         >
           ←
         </button>
         <div 
-          className="header-title"
+          className="login-header-title"
           onClick={() => navigate('/')}
           style={{ cursor: 'pointer' }}
         >
           UTIS
         </div>
         <button 
-          className="home-button"
+          className="login-home-button"
           onClick={() => navigate('/')}
         >
           <img src="/src/assets/home-icon.png" alt="Home" />
@@ -35,12 +35,12 @@ export function LoginPage() {
       </div>
 
       {/* 메인 콘텐츠 */}
-      <div className="login-content">
+      <div className="login-page-content">
         {/* 제목 */}
-        <h1 className="login-title">UTIS</h1>
+        <h1 className="login-page-title">UTIS</h1>
         
         {/* 설명 텍스트 */}
-        <div className="login-description">
+        <div className="login-page-description">
           <p>Your travel is special</p>
           <p>당신의 여행은 특별합니다</p>
         </div>

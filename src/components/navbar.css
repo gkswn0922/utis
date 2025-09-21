@@ -1,4 +1,4 @@
-.nav {
+.navbar {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -6,7 +6,7 @@
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid #eee;
 }
-.nav__inner {
+.navbar__inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -14,23 +14,23 @@
   gap: 16px;
   padding: 10px 16px;
 }
-.nav__brand {
+.navbar__brand {
   font-weight: 800;
   font-size: 20px;
   color: #ff5b5b;
 }
-.nav__menu {
+.navbar__menu {
   display: flex;
   gap: 12px;
 }
-.nav__menu a {
+.navbar__menu a {
   color: #333;
 }
-.nav__menu a.active {
+.navbar__menu a.active {
   color: #ff5b5b;
 }
-.nav__search { margin-left: auto; }
-.nav__search input {
+.navbar__search { margin-left: auto; }
+.navbar__search input {
   width: 260px;
   padding: 8px 12px;
   border: 1px solid #ddd;
@@ -38,7 +38,7 @@
   font-size: 14px;
 }
 @media (max-width: 640px) {
-  .nav__search input { width: 160px; }
+  .navbar__search input { width: 160px; }
 }
 
 

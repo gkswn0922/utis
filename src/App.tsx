@@ -5,10 +5,9 @@ import { HomePage } from './pages/Home'
 import { ProductListPage } from './pages/ProductList'
 import { ProductDetailPage } from './pages/ProductDetail'
 import { SearchResultsPage } from './pages/SearchResults'
-import { OsakaSearchResults } from './pages/OsakaSearchResults'
-import { OsakaProductDetail } from './pages/OsakaProductDetail.tsx'
+import OsakaSearchResults from './pages/OsakaSearchResults'
+import OsakaProductDetail from './pages/OsakaProductDetail'
 import { ReviewsPage } from './pages/ReviewsPage'
-import { LoginPage } from './pages/LoginPage'
 import { ThemeProvider } from './contexts/ThemeContext'
 
 function Layout() {
@@ -35,7 +34,6 @@ export default function App() {
           <Route path="/osaka/product/:id" element={<OsakaProductDetail />} />
           <Route path="/reviews" element={<ReviewsPage />} />
         </Route>
-        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </ThemeProvider>
   )

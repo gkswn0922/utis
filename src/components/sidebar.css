@@ -1,5 +1,5 @@
 /* 사이드바 오버레이 */
-.sidebar-overlay {
+.sidebar-component-component-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
 }
 
 /* 사이드바 */
-.sidebar {
+.sidebar-component {
   width: 320px;
   height: 100vh;
   background: white;
@@ -22,24 +22,24 @@
 }
 
 /* 헤더 */
-.sidebar-header {
+.sidebar-component-header {
   padding: 16px 20px;
   border-bottom: 1px solid #f0f0f0;
 }
 
-.header-content {
+.sidebar-header-content {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.logo {
+.sidebar-logo {
   font-size: 20px;
   font-weight: bold;
   color: #000000;
 }
 
-.search-bar {
+.sidebar-search-bar {
   flex: 1;
   height: 36px;
   background: #f8f9fa;
@@ -50,18 +50,18 @@
   padding: 0 12px;
 }
 
-.search-icon {
+.sidebar-search-icon {
   width: 16px;
   height: 16px;
   color: #666;
 }
 
-.search-text {
+.sidebar-search-text {
   font-size: 14px;
   color: #666;
 }
 
-.close-button {
+.sidebar-close-button {
   width: 32px;
   height: 32px;
   border: none;
@@ -73,19 +73,19 @@
   color: #666;
 }
 
-.close-button svg {
+.sidebar-close-button svg {
   width: 20px;
   height: 20px;
 }
 
 /* 액션 버튼들 */
-.action-buttons {
+.sidebar-action-buttons {
   padding: 0 20px 20px;
   display: flex;
   gap: 12px;
 }
 
-.search-button {
+.sidebar-search-button {
   flex: 1;
   height: 44px;
   background: white;
@@ -97,7 +97,7 @@
   cursor: pointer;
 }
 
-.login-button {
+.sidebar-login-button {
   flex: 1;
   height: 44px;
   background: #0066cc;
@@ -110,16 +110,16 @@
 }
 
 /* 메뉴 섹션들 */
-.menu-sections {
+.sidebar-menu-sections {
   flex: 1;
   padding: 0 20px;
 }
 
-.menu-section {
+.sidebar-menu-section {
   margin-bottom: 24px;
 }
 
-.section-title {
+.sidebar-section-title {
   font-size: 14px;
   font-weight: 600;
   color: #333;
@@ -128,13 +128,13 @@
   border-bottom: 1px solid #f0f0f0;
 }
 
-.menu-items {
+.sidebar-menu-items {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.menu-item {
+.sidebar-menu-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,11 +144,11 @@
   font-size: 14px;
 }
 
-.menu-item:hover {
+.sidebar-menu-item:hover {
   color: #0066cc;
 }
 
-.menu-icon {
+.sidebar-menu-icon {
   width: 20px;
   height: 20px;
   display: flex;
@@ -158,7 +158,7 @@
   color: #666;
 }
 
-.chevron {
+.sidebar-chevron {
   width: 16px;
   height: 16px;
   color: #999;
@@ -166,7 +166,7 @@
 
 /* 반응형 */
 @media (max-width: 480px) {
-  .sidebar {
+  .sidebar-component {
     width: 100vw;
   }
   
@@ -175,11 +175,11 @@
     padding: 16px;
   }
   
-  .action-buttons {
+  .sidebar-action-buttons {
     padding: 0 16px 16px;
   }
   
-  .menu-sections {
+  .sidebar-menu-sections {
     padding: 0 16px;
   }
 }

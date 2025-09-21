@@ -4,7 +4,7 @@
   font-family: Arial, sans-serif;
 }
 
-.login-header {
+.login-page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
   border-bottom: 1px solid #eee;
 }
 
-.back-button, .home-button {
+.login-back-button, .login-home-button {
   padding: 8px;
   border: none;
   background: none;
@@ -20,25 +20,25 @@
   font-size: 18px;
 }
 
-.home-button img {
+.login-home-button img {
   width: 20px;
   height: 20px;
   object-fit: contain;
 }
 
-.header-title {
+.login-header-title {
   font-size: 22px;
   font-weight: bold;
   color: #333;
 }
 
-.login-content {
+.login-page-content {
   padding: 40px 20px;
   max-width: 400px;
   margin: 0 auto;
 }
 
-.login-title {
+.login-page-title {
   font-size: 24px; /* 1단계 올림 (22px → 24px) */
   font-weight: bold;
   text-align: center;
@@ -46,12 +46,12 @@
   color: #333;
 }
 
-.login-description {
+.login-page-description {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.login-description p {
+.login-page-description p {
   font-size: 14px;
   color: #666;
   margin: 4px 0;

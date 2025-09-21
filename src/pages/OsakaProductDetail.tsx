@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import './osaka-product-detail.css'
 
-export function OsakaProductDetail() {
+function OsakaProductDetail() {
   const navigate = useNavigate()
   const { id } = useParams()
   const [activeTab, setActiveTab] = useState('상세정보')
@@ -270,3 +270,5 @@ export function OsakaProductDetail() {
     </div>
   )
 }
+
+export default OsakaProductDetail

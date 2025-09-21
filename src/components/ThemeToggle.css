@@ -1,4 +1,4 @@
-.theme-toggle {
+.theme-toggle-component {
   position: relative;
   width: 50px;
   height: 50px;
@@ -13,24 +13,24 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.theme-toggle:hover {
+.theme-toggle-component:hover {
   background: var(--theme-toggle-hover-bg, #e5e7eb);
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.theme-toggle:active {
+.theme-toggle-component:active {
   transform: scale(0.95);
 }
 
-.theme-toggle-icon {
+.theme-toggle-component-icon {
   width: 24px;
   height: 24px;
   color: var(--theme-toggle-color, #374151);
   transition: all 0.3s ease;
 }
 
-.theme-toggle-icon svg {
+.theme-toggle-component-icon svg {
   width: 100%;
   height: 100%;
 }
@@ -50,7 +50,7 @@
 }
 
 /* 애니메이션 효과 */
-.theme-toggle-icon {
+.theme-toggle-component-icon {
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -67,27 +67,27 @@
 
 /* 접근성 개선 */
 @media (prefers-reduced-motion: reduce) {
-  .theme-toggle,
-  .theme-toggle-icon {
+  .theme-toggle-component,
+  .theme-toggle-component-icon {
     transition: none;
     animation: none;
   }
   
-  .theme-toggle:hover {
+  .theme-toggle-component:hover {
     transform: none;
   }
   
-  .theme-toggle:active {
+  .theme-toggle-component:active {
     transform: none;
   }
 }
 
 /* 포커스 스타일 */
-.theme-toggle:focus {
+.theme-toggle-component:focus {
   outline: 2px solid var(--theme-toggle-focus, #3b82f6);
   outline-offset: 2px;
 }
 
-:root.dark .theme-toggle:focus {
+:root.dark .theme-toggle-component:focus {
   --theme-toggle-focus: #60a5fa;
 }

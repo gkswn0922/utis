@@ -5,7 +5,7 @@
 }
 
 /* 헤더 */
-.reviews-header {
+.reviews-page-header {
   display: flex;
   align-items: center;
   padding: 16px 20px;
@@ -16,7 +16,7 @@
   z-index: 100;
 }
 
-.back-button {
+.reviews-back-button {
   width: 40px;
   height: 40px;
   border: none;
@@ -31,17 +31,17 @@
   margin-right: 16px;
 }
 
-.back-button:hover {
+.reviews-back-button:hover {
   background-color: #f5f5f5;
 }
 
-.back-button svg {
+.reviews-back-button svg {
   width: 20px;
   height: 20px;
   stroke-width: 2;
 }
 
-.reviews-header h1 {
+.reviews-page-header h1 {
   font-size: 20px;
   font-weight: 600;
   color: #333;
@@ -49,18 +49,18 @@
 }
 
 /* 정렬 섹션 */
-.sort-section {
+.reviews-sort-section {
   padding: 16px 20px;
   background: white;
   border-bottom: 1px solid #f0f0f0;
 }
 
-.sort-options {
+.reviews-sort-options {
   display: flex;
   gap: 8px;
 }
 
-.sort-button {
+.reviews-sort-button {
   padding: 8px 16px;
   border: 1px solid #e0e0e0;
   background: white;
@@ -71,23 +71,23 @@
   transition: all 0.2s;
 }
 
-.sort-button:hover {
+.reviews-sort-button:hover {
   border-color: #0066cc;
   color: #0066cc;
 }
 
-.sort-button.active {
+.reviews-sort-button.active {
   background: #0066cc;
   border-color: #0066cc;
   color: white;
 }
 
 /* 리뷰 목록 */
-.reviews-list {
+.reviews-page-list {
   padding: 0 20px;
 }
 
-.review-item {
+.reviews-review-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,20 +97,20 @@
   transition: background-color 0.2s;
 }
 
-.review-item:hover {
+.reviews-review-item:hover {
   background-color: #fafafa;
 }
 
-.review-item:last-child {
+.reviews-review-item:last-child {
   border-bottom: none;
 }
 
-.review-content {
+.reviews-review-content {
   flex: 1;
   margin-right: 16px;
 }
 
-.review-title {
+.reviews-review-title {
   font-size: 16px;
   font-weight: 500;
   color: #333;
@@ -119,28 +119,28 @@
   text-align: left;
 }
 
-.review-meta {
+.reviews-review-meta {
   display: flex;
   gap: 12px;
   font-size: 12px;
   color: #999;
 }
 
-.review-author {
+.reviews-review-author {
   font-weight: 500;
 }
 
-.review-date {
+.reviews-review-date {
   color: #ccc;
 }
 
-.review-stats {
+.reviews-review-stats {
   display: flex;
   gap: 16px;
   align-items: center;
 }
 
-.stat-item {
+.reviews-stat-item {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -148,59 +148,59 @@
   color: #666;
 }
 
-.stat-icon {
+.reviews-stat-icon {
   width: 14px;
   height: 14px;
   stroke-width: 2;
 }
 
-.stat-icon.heart {
+.reviews-stat-icon.heart {
   color: #ff4757;
 }
 
 /* 반응형 */
 @media (max-width: 768px) {
-  .reviews-header {
+  .reviews-page-header {
     padding: 12px 16px;
   }
   
-  .reviews-header h1 {
+  .reviews-page-header h1 {
     font-size: 18px;
   }
   
-  .sort-section {
+  .reviews-sort-section {
     padding: 12px 16px;
   }
   
-  .reviews-list {
+  .reviews-page-list {
     padding: 0 16px;
   }
   
-  .review-item {
+  .reviews-review-item {
     padding: 16px 0;
   }
   
-  .review-title {
+  .reviews-review-title {
     font-size: 15px;
   }
   
-  .review-stats {
+  .reviews-review-stats {
     gap: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .review-item {
+  .reviews-review-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
   
-  .review-content {
+  .reviews-review-content {
     margin-right: 0;
   }
   
-  .review-stats {
+  .reviews-review-stats {
     align-self: flex-end;
   }
 }

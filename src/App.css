@@ -23,7 +23,7 @@
   --accent-color: #6B8AFF;
 }
 
-.home {
+.app-home {
   background-color: var(--bg-primary);
   min-height: 100vh;
   padding-bottom: 80px; /* 하단 네비게이션 공간 */
@@ -31,7 +31,7 @@
 }
 
 /* 프로모션 배너 */
-.promotion-banner {
+.app-promotion-banner {
   margin: 0 20px;
   aspect-ratio: 4/4;
   background-image: url('https://images.unsplash.com/photo-1484821582734-6c6c9f99a672?w=1600&q=80');
@@ -42,7 +42,7 @@
   overflow: hidden;
 }
 
-.promotion-banner::before {
+.app-promotion-banner::before {
   content: '';
   position: absolute;
   top: 0;
@@ -53,7 +53,7 @@
   border-radius: 16px;
 }
 
-.banner-content {
+.app-banner-content {
   position: relative;
   z-index: 1;
   height: 100%;
@@ -63,13 +63,13 @@
   padding: 20px;
 }
 
-.banner-text {
+.app-banner-text {
   color: white;
   font-size: 18px;
   font-weight: bold;
 }
 
-.banner-button {
+.app-banner-button {
   width: 280px;
   padding: 7px 40px;
   background: white;
@@ -83,7 +83,7 @@
 }
 
 /* 작은 프로모션 배너 */
-.small-promotion-banner {
+.app-small-promotion-banner {
   margin: 16px 20px;
   padding: 10px;
   background: linear-gradient(to right, #6BA6F7, #4A90E2);
@@ -93,11 +93,11 @@
   gap: 12px;
 }
 
-.ticket-icons {
+.app-ticket-icons {
   position: relative;
 }
 
-.ticket-icon-large {
+.app-ticket-icon-large {
   padding: 6px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 6px;
@@ -108,13 +108,13 @@
   justify-content: center;
 }
 
-.ticket-icon-large svg {
+.app-ticket-icon-large svg {
   width: 20px;
   height: 20px;
   color: white;
 }
 
-.ticket-icon-small {
+.app-ticket-icon-small {
   position: absolute;
   left: 6px;
   top: 3px;
@@ -128,49 +128,49 @@
   justify-content: center;
 }
 
-.ticket-icon-small svg {
+.app-ticket-icon-small svg {
   width: 14px;
   height: 14px;
   color: white;
 }
 
-.promotion-text {
+.app-promotion-text {
   flex: 1;
   color: white;
 }
 
-.promotion-title {
+.app-promotion-title {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 1px;
 }
 
-.promotion-subtitle {
+.app-promotion-subtitle {
   font-size: 11px;
   font-weight: 500;
   margin-bottom: 0;
 }
 
-.promotion-discount {
+.app-promotion-discount {
   font-size: 9px;
   font-weight: 400;
 }
 
-.arrow-icon {
+.app-arrow-icon {
   width: 16px;
   height: 16px;
   color: white;
 }
 
 /* 카테고리 섹션 */
-.category-section {
+.app-category-section {
   padding: 0 20px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
 }
 
-.category-item {
+.app-category-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,32 +178,32 @@
   cursor: pointer;
 }
 
-.category-icon {
+.app-category-icon {
   width: 32px;
   height: 32px;
   color: #5F7CF6;
 }
 
-.category-item span {
+.app-category-item span {
   font-size: 12px;
   font-weight: 500;
   color: var(--text-primary);
 }
 
 /* 인기 상품 섹션 */
-.popular-section {
+.app-popular-section {
   padding: 0 20px;
   margin-bottom: 24px;
 }
 
-.popular-section h2 {
+.app-popular-section h2 {
   font-size: 18px;
   font-weight: bold;
   color: var(--text-primary);
   margin-bottom: 16px;
 }
 
-.popular-product-card {
+.app-popular-product-card {
   background: var(--bg-secondary);
   border-radius: 20px;
   box-shadow: 0 2px 10px var(--shadow);
@@ -212,19 +212,19 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-image {
+.app-product-image {
   width: 100%;
   height: 130px;
   position: relative;
 }
 
-.product-image img {
+.app-product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.product-image::after {
+.app-product-image::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -234,29 +234,29 @@
   background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
 }
 
-.product-info {
+.app-product-info {
   padding: 16px;
 }
 
-.product-location {
+.app-product-location {
   display: flex;
   align-items: center;
   gap: 4px;
   margin-bottom: 8px;
 }
 
-.product-location svg {
+.app-product-location svg {
   width: 16px;
   height: 16px;
   color: #666666;
 }
 
-.product-location span {
+.app-product-location span {
   font-size: 12px;
   color: #666666;
 }
 
-.product-info h3 {
+.app-product-info h3 {
   font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
@@ -268,19 +268,19 @@
   overflow: hidden;
 }
 
-.product-price {
+.app-product-price {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.price {
+.app-price {
   font-size: 18px;
   font-weight: bold;
   color: var(--text-primary);
 }
 
-.discount-badge {
+.app-discount-badge {
   padding: 4px 8px;
   background: #F5333F;
   color: white;
@@ -290,37 +290,37 @@
 }
 
 /* 여행 후기 섹션 */
-.reviews-section {
+.app-reviews-section {
   padding: 0 20px;
   margin-bottom: 100px;
 }
 
-.reviews-header {
+.app-reviews-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.reviews-header h2 {
+.app-reviews-header h2 {
   font-size: 18px;
   font-weight: bold;
   color: var(--text-primary);
 }
 
-.more-link {
+.app-more-link {
   font-size: 14px;
   color: #577DFE;
   font-weight: 500;
 }
 
-.reviews-grid {
+.app-reviews-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
-.review-card {
+.app-review-card {
   background: var(--bg-secondary);
   border-radius: 16px;
   box-shadow: 0 2px 8px var(--shadow-hover);
@@ -328,17 +328,17 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.review-image {
+.app-review-image {
   position: relative;
 }
 
-.review-image img {
+.app-review-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.heart-icon {
+.app-heart-icon {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -352,13 +352,13 @@
   justify-content: center;
 }
 
-.heart-icon svg {
+.app-heart-icon svg {
   width: 18px;
   height: 18px;
   color: #F5333F;
 }
 
-.review-overlay {
+.app-review-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -368,7 +368,7 @@
   color: white;
 }
 
-.review-overlay h4 {
+.app-review-overlay h4 {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
@@ -379,36 +379,36 @@
   overflow: hidden;
 }
 
-.review-meta {
+.app-review-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.review-meta span {
+.app-review-meta span {
   font-size: 12px;
   font-weight: 500;
 }
 
-.likes {
+.app-likes {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.likes svg {
+.app-likes svg {
   width: 14px;
   height: 14px;
   color: white;
 }
 
-.likes span {
+.app-likes span {
   font-size: 12px;
   font-weight: 500;
 }
 
 /* 하단 네비게이션 */
-.bottom-navigation {
+.app-bottom-navigation {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -421,7 +421,7 @@
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.nav-item {
+.app-nav-item {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -433,30 +433,30 @@
   transition: all 0.2s;
 }
 
-.nav-item.active {
+.app-nav-item.active {
   color: #577DFE;
 }
 
-.nav-item.active svg {
+.app-nav-item.active svg {
   background: #58CCFF;
   border-radius: 16px;
   padding: 6px;
   color: white;
 }
 
-.nav-item svg {
+.app-nav-item svg {
   width: 20px;
   height: 20px;
 }
 
-.nav-item span {
+.app-nav-item span {
   font-size: 12px;
   font-weight: 500;
 }
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-  .search-section {
+  .app-search-section {
     padding: 16px;
     margin-top: 100px;
   }
@@ -469,12 +469,12 @@
     margin: 16px;
   }
   
-  .category-section {
+  .app-category-section {
     padding: 0 16px;
   }
   
-  .popular-section,
-  .reviews-section {
+  .app-popular-section,
+  .app-reviews-section {
     padding: 0 16px;
   }
   
@@ -485,15 +485,15 @@
 }
 
 @media (max-width: 480px) {
-  .reviews-grid {
+  .app-reviews-grid {
     grid-template-columns: 1fr;
   }
   
-  .category-section {
+  .app-category-section {
     gap: 8px;
   }
   
-  .category-item span {
+  .app-category-item span {
     font-size: 10px;
   }
 }

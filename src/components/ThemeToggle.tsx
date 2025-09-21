@@ -6,12 +6,12 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="theme-toggle"
+      className="theme-toggle-component"
       onClick={toggleTheme}
       aria-label={theme === 'light' ? '다크모드로 전환' : '라이트모드로 전환'}
       title={theme === 'light' ? '다크모드로 전환' : '라이트모드로 전환'}
     >
-      <div className="theme-toggle-icon">
+      <div className="theme-toggle-component-icon">
         {theme === 'light' ? (
           // 달 아이콘 (다크모드로 전환)
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
