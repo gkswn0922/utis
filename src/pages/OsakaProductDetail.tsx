@@ -19,7 +19,7 @@ export function OsakaProductDetail() {
     originalPrice: '₩ 269,000',
     discountPrice: '₩ 209,000',
     images: [
-      '/product1.png',
+      '/src/assets/product1.png',
       '/product2.png',
       '/product3.png'
     ],
@@ -132,10 +132,10 @@ export function OsakaProductDetail() {
       <div className="product-image-section">
         <div className="main-image">
           <img 
-            src="/product1.png"
+            src="/src/assets/product1.png"
             alt={productData.title}
             onError={(e) => {
-              e.currentTarget.src = '/product1.png'
+              e.currentTarget.src = '/src/assets/product1.png'
             }}
           />
         </div>
@@ -262,6 +262,9 @@ export function OsakaProductDetail() {
         <div className="detail-images">
           <img src="/src/assets/detail1.jpg" alt="상세이미지 1" />
           <img src="/src/assets/detail2.jpg" alt="상세이미지 2" />
+          <img src="/src/assets/detail3.jpg" alt="상세이미지 3" />
+          <img src="/src/assets/detail4.jpg" alt="상세이미지 4" />
+          <img src="/src/assets/detail5.jpg" alt="상세이미지 5" />
         </div>
       </div>
     </div>
