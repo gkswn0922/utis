@@ -98,7 +98,7 @@ export function HomePage() {
         <h2>인기 상품</h2>
         <div className="products-container">
           <div className="products-scroll">
-            <div className="popular-product-card" onClick={() => navigate('/products/p1')}>
+            <div className="popular-product-card" onClick={() => navigate('/products/r1')}>
               <div className="product-image">
                 <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="JR 하루카 간사이 공항 특급 열차 티켓" />
                 <div className="product-location">
@@ -118,7 +118,7 @@ export function HomePage() {
               </div>
             </div>
             
-            <div className="popular-product-card" onClick={() => navigate('/products/p2')}>
+            <div className="popular-product-card" onClick={() => navigate('/products/r1')}>
               <div className="product-image">
                 <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="도쿄 디즈니랜드 티켓" />
                 <div className="product-location">
@@ -138,7 +138,7 @@ export function HomePage() {
               </div>
             </div>
             
-            <div className="popular-product-card" onClick={() => navigate('/products/p3')}>
+            <div className="popular-product-card" onClick={() => navigate('/products/r1')}>
               <div className="product-image">
                 <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="교토 버스 패스" />
                 <div className="product-location">
@@ -158,7 +158,7 @@ export function HomePage() {
               </div>
             </div>
             
-            <div className="popular-product-card" onClick={() => navigate('/products/p4')}>
+            <div className="popular-product-card" onClick={() => navigate('/products/r1')}>
               <div className="product-image">
                 <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="유니버설 스튜디오 재팬 티켓" />
                 <div className="product-location">
