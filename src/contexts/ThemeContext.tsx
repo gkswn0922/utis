@@ -21,11 +21,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       return savedTheme
     }
     
-    // 시스템의 다크모드 설정 확인
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    }
-    
+    // 항상 라이트 모드로 기본 설정
     return 'light'
   })
 

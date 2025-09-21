@@ -12,16 +12,16 @@ export function OsakaProductDetail() {
   // 상품 데이터 (실제로는 API에서 가져올 데이터)
   const productData = {
     id: 1,
-    title: '인천국제공항 공항철도 AREX 편도티켓',
+    title: '루미볼트 여행용 멀티 어댑터',
     rating: 3.8,
     reviewCount: 14,
-    price: '₩ 87,700~',
+    price: '₩ 32,000~',
     originalPrice: '₩ 269,000',
     discountPrice: '₩ 209,000',
     images: [
-      '/api/placeholder/400/300',
-      '/api/placeholder/400/300',
-      '/api/placeholder/400/300'
+      '/product1.png',
+      '/product2.png',
+      '/product3.png'
     ],
     benefits: [
       '6만원 즉시 할인 (정상가) 269,000원 → 209,000',
@@ -36,14 +36,56 @@ export function OsakaProductDetail() {
         author: 'djskdj434',
         rating: 4.5,
         content: '효도여행시켜준다고 딸이 주문해준 캐리어랑 베트남여행 잘...',
-        image: '/api/placeholder/100/100'
+        image: '/src/assets/review1.png'
       },
       {
         id: 2,
         author: 'djskdj434',
         rating: 4.5,
         content: '효도여행시켜준다고 딸이 주문 캐리어랑 베트남여행 잘...',
-        image: '/api/placeholder/100/100'
+        image: '/src/assets/review2.png'
+      },
+      {
+        id: 3,
+        author: 'travel_lover',
+        rating: 4.8,
+        content: '정말 만족스러운 여행이었습니다. 다음에도 꼭 이용하고 싶어요!',
+        image: '/src/assets/review3.png'
+      },
+      {
+        id: 4,
+        author: 'vacation_seeker',
+        rating: 4.2,
+        content: '가격 대비 정말 좋은 서비스였습니다. 추천해요!',
+        image: '/src/assets/review4.png'
+      },
+      {
+        id: 5,
+        author: 'wanderlust_99',
+        rating: 4.7,
+        content: '친구들과 함께 가서 정말 즐거웠습니다. 기억에 남는 여행!',
+        image: '/src/assets/review5.png'
+      },
+      {
+        id: 6,
+        author: 'explorer_123',
+        rating: 4.3,
+        content: '처음 해외여행이었는데 정말 도움이 많이 되었어요.',
+        image: '/src/assets/review6.png'
+      },
+      {
+        id: 7,
+        author: 'adventure_time',
+        rating: 4.6,
+        content: '가족여행으로 갔는데 모두 만족했습니다. 감사해요!',
+        image: '/src/assets/review7.png'
+      },
+      {
+        id: 8,
+        author: 'journey_maker',
+        rating: 4.4,
+        content: '혼자 여행갔는데 안전하고 편리했습니다. 추천합니다!',
+        image: '/src/assets/review8.png'
       }
     ]
   }
@@ -90,37 +132,27 @@ export function OsakaProductDetail() {
       <div className="product-image-section">
         <div className="main-image">
           <img 
-            src={productData.images[selectedImageIndex]} 
+            src="/product1.png"
             alt={productData.title}
             onError={(e) => {
-              e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRkY2QjM1Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIj5BUkVYPC90ZXh0Pgo8L3N2Zz4='
+              e.currentTarget.src = '/product1.png'
             }}
           />
-        </div>
-        <div className="image-indicators">
-          {productData.images.map((_, index) => (
-            <div 
-              key={index}
-              className={`indicator ${index === selectedImageIndex ? 'active' : ''}`}
-              onClick={() => setSelectedImageIndex(index)}
-            />
-          ))}
         </div>
       </div>
 
       {/* Product Info */}
       <div className="product-info-section">
         <div className="rating-section">
-          <div className="stars">{renderStars(productData.rating)}</div>
-          <span className="rating-text">{productData.rating}</span>
+          <div className="rating-left">
+            <div className="stars">{renderStars(productData.rating)}</div>
+            <span className="rating-text">{productData.rating}</span>
+            <span className="review-count">({Math.floor(Math.random() * 1000) + 50}개 리뷰)</span>
+          </div>
+          <button className="review-link">리뷰보기 →</button>
         </div>
         
         <h1 className="product-title">{productData.title}</h1>
-        
-        <div className="review-section">
-          <span className="review-count">{productData.rating} ({productData.reviewCount})</span>
-          <button className="review-link">리뷰보기 →</button>
-        </div>
 
         <div className="price-section">
           <span className="current-price">{productData.price}</span>
@@ -128,14 +160,15 @@ export function OsakaProductDetail() {
 
         {/* Benefits */}
         <div className="benefits-section">
+          <h3 className="benefits-title">요약</h3>
           <div className="benefits-list">
             {productData.benefits.map((benefit, index) => (
               <div key={index} className="benefit-item">
-                • {benefit}
+                {benefit}
               </div>
             ))}
-            <button className="more-btn">더보기</button>
           </div>
+          <button className="more-btn">더보기</button>
         </div>
 
         {/* Payment Info */}
@@ -171,22 +204,41 @@ export function OsakaProductDetail() {
         </div>
       </div>
 
+      {/* Bottom Navigation */}
+      <div className="bottom-nav">
+        <div className="nav-tabs">
+          {tabs.map(tab => (
+            <button
+              key={tab.id}
+              className={`nav-tab ${activeTab === tab.id ? 'active' : ''}`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              {tab.label} {tab.count && `(${tab.count})`}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Satisfaction & Reviews */}
       <div className="satisfaction-section">
         <div className="satisfaction-score">
-          <div className="score-large">상품만족도 {productData.satisfaction}/5</div>
-          <div className="satisfaction-text">★만족해요</div>
+          <h3 className="satisfaction-title">상품만족도</h3>
+          <div className="rating-display">
+            <span className="star-icon">★</span>
+            <span className="rating-number">4.7</span>
+          </div>
+          <div className="review-count">850 개의 리뷰가 있습니다.</div>
         </div>
         
         <div className="hot-reviews">
           <div className="section-header">
-            <h3>HOT 리뷰</h3>
-            <button className="more-btn">더보기 →</button>
+            <h3>인기 리뷰</h3>
+            <span className="more-text">더보기</span>
           </div>
           
           <div className="reviews-grid">
             {productData.hotReviews.map(review => (
-              <div key={review.id} className="review-card">
+              <div key={review.id} className="detail-review-card">
                 <img 
                   src={review.image} 
                   alt="리뷰 이미지"
@@ -205,18 +257,11 @@ export function OsakaProductDetail() {
         </div>
       </div>
 
-      {/* Bottom Navigation */}
-      <div className="bottom-nav">
-        <div className="nav-tabs">
-          {tabs.map(tab => (
-            <button
-              key={tab.id}
-              className={`nav-tab ${activeTab === tab.id ? 'active' : ''}`}
-              onClick={() => setActiveTab(tab.id)}
-            >
-              {tab.label} {tab.count && `(${tab.count})`}
-            </button>
-          ))}
+      {/* Product Detail Images */}
+      <div className="product-detail-section">
+        <div className="detail-images">
+          <img src="/src/assets/detail1.jpg" alt="상세이미지 1" />
+          <img src="/src/assets/detail2.jpg" alt="상세이미지 2" />
         </div>
       </div>
     </div>
