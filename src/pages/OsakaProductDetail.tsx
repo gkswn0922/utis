@@ -267,6 +267,149 @@ function OsakaProductDetail() {
           <img src="/src/assets/detail5.jpg" alt="상세이미지 5" />
         </div>
       </div>
+
+      {/* 상품문의 섹션 */}
+      <div className="product-inquiry-section">
+        <div className="inquiry-header">
+          <h2>상품문의</h2>
+          <div className="inquiry-actions">
+            <button className="inquiry-btn active">문의하기</button>
+            <button className="inquiry-btn">내 문의글</button>
+          </div>
+        </div>
+        
+        <div className="search-box">
+          <div className="search-icon">🔍</div>
+          <input type="text" placeholder="검색어를 입력하세요" />
+        </div>
+
+        <div className="faq-section">
+          <h3>자주묻는 질문</h3>
+          <div className="faq-tags">
+            <button className="faq-tag active">회원가입</button>
+            <button className="faq-tag">환불규정</button>
+            <button className="faq-tag">예약안내</button>
+            <button className="faq-tag">마이페이지</button>
+            <button className="faq-tag">결제내역</button>
+            <button className="faq-tag">일정변경</button>
+            <button className="faq-tag">리뷰작성</button>
+            <button className="faq-tag">계정정보</button>
+          </div>
+        </div>
+
+        <div className="inquiry-list">
+          <div className="inquiry-item">
+            <div className="inquiry-content">
+              <div className="inquiry-icon">🔒</div>
+              <div className="inquiry-text">
+                <div className="inquiry-title">[결제] 카드 변경 후 재예약 가능할까요?</div>
+                <div className="inquiry-preview">비공개 상품문의입니다.</div>
+              </div>
+            </div>
+            <div className="inquiry-meta">
+              <div className="inquiry-author">이동민</div>
+              <div className="inquiry-date">2025-09-19 | 12:22:56</div>
+              <div className="inquiry-status completed">답변완료</div>
+            </div>
+          </div>
+
+          <div className="inquiry-item">
+            <div className="inquiry-content">
+              <div className="inquiry-icon">🔒</div>
+              <div className="inquiry-text">
+                <div className="inquiry-title">[환불] 취소 수수료 관련 문의</div>
+                <div className="inquiry-preview">제가 어제 하나카드로 결제진행했었는데...</div>
+              </div>
+            </div>
+            <div className="inquiry-meta">
+              <div className="inquiry-author">김민수</div>
+              <div className="inquiry-date">2025-09-18 | 15:30:12</div>
+              <div className="inquiry-status completed">답변완료</div>
+            </div>
+          </div>
+
+          <div className="inquiry-item">
+            <div className="inquiry-content">
+              <div className="inquiry-icon">🔒</div>
+              <div className="inquiry-text">
+                <div className="inquiry-title">[예약] 일정 변경 가능한가요?</div>
+                <div className="inquiry-preview">비공개 상품문의입니다.</div>
+              </div>
+            </div>
+            <div className="inquiry-meta">
+              <div className="inquiry-author">박지영</div>
+              <div className="inquiry-date">2025-09-17 | 09:15:45</div>
+              <div className="inquiry-status pending">미답변</div>
+            </div>
+          </div>
+
+          <div className="inquiry-item">
+            <div className="inquiry-content">
+              <div className="inquiry-icon">🔒</div>
+              <div className="inquiry-text">
+                <div className="inquiry-title">[배송] 언제까지 도착하나요?</div>
+                <div className="inquiry-preview">비공개 상품문의입니다.</div>
+              </div>
+            </div>
+            <div className="inquiry-meta">
+              <div className="inquiry-author">정수진</div>
+              <div className="inquiry-date">2025-09-16 | 14:20:30</div>
+              <div className="inquiry-status completed">답변완료</div>
+            </div>
+          </div>
+
+          <div className="inquiry-item">
+            <div className="inquiry-content">
+              <div className="inquiry-icon">🔒</div>
+              <div className="inquiry-text">
+                <div className="inquiry-title">[상품] 옵션 변경 가능한가요?</div>
+                <div className="inquiry-preview">비공개 상품문의입니다.</div>
+              </div>
+            </div>
+            <div className="inquiry-meta">
+              <div className="inquiry-author">최영희</div>
+              <div className="inquiry-date">2025-09-15 | 11:45:22</div>
+              <div className="inquiry-status pending">미답변</div>
+            </div>
+          </div>
+
+          <div className="inquiry-item">
+            <div className="inquiry-content">
+              <div className="inquiry-icon">🔒</div>
+              <div className="inquiry-text">
+                <div className="inquiry-title">[쿠폰] 할인 쿠폰 사용법</div>
+                <div className="inquiry-preview">비공개 상품문의입니다.</div>
+              </div>
+            </div>
+            <div className="inquiry-meta">
+              <div className="inquiry-author">이준호</div>
+              <div className="inquiry-date">2025-09-14 | 16:10:15</div>
+              <div className="inquiry-status completed">답변완료</div>
+            </div>
+          </div>
+
+          <div className="inquiry-item">
+            <div className="inquiry-content">
+              <div className="inquiry-icon">🔒</div>
+              <div className="inquiry-text">
+                <div className="inquiry-title">[회원] 비밀번호 변경 문의</div>
+                <div className="inquiry-preview">비공개 상품문의입니다.</div>
+              </div>
+            </div>
+            <div className="inquiry-meta">
+              <div className="inquiry-author">강민지</div>
+              <div className="inquiry-date">2025-09-13 | 13:25:40</div>
+              <div className="inquiry-status completed">답변완료</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="pagination">
+          <button className="pagination-btn">←</button>
+          <span className="pagination-info">3 / 78</span>
+          <button className="pagination-btn">→</button>
+        </div>
+      </div>
     </div>
   )
 }
