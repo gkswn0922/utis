@@ -8,6 +8,7 @@ function OsakaProductDetail() {
   const [activeTab, setActiveTab] = useState('상세정보')
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const [isFavorite, setIsFavorite] = useState(false)
+  const [showAllImages, setShowAllImages] = useState(false)
 
   // 상품 데이터 (실제로는 API에서 가져올 데이터)
   const productData = {
@@ -262,10 +263,29 @@ function OsakaProductDetail() {
         <div className="detail-images">
           <img src="/src/assets/detail1.jpg" alt="상세이미지 1" />
           <img src="/src/assets/detail2.jpg" alt="상세이미지 2" />
-          <img src="/src/assets/detail3.jpg" alt="상세이미지 3" />
-          <img src="/src/assets/detail4.jpg" alt="상세이미지 4" />
-          <img src="/src/assets/detail5.jpg" alt="상세이미지 5" />
+          {showAllImages && (
+            <>
+              <img src="/src/assets/detail3.jpg" alt="상세이미지 3" />
+              <img src="/src/assets/detail4.jpg" alt="상세이미지 4" />
+              <img src="/src/assets/detail5.jpg" alt="상세이미지 5" />
+            </>
+          )}
         </div>
+        {!showAllImages ? (
+          <button 
+            className="expand-detail-btn"
+            onClick={() => setShowAllImages(true)}
+          >
+            상세정보 더보기
+          </button>
+        ) : (
+          <button 
+            className="collapse-detail-btn"
+            onClick={() => setShowAllImages(false)}
+          >
+            상세정보 접기
+          </button>
+        )}
       </div>
 
       {/* 상품문의 섹션 */}
@@ -408,6 +428,58 @@ function OsakaProductDetail() {
           <button className="pagination-btn">←</button>
           <span className="pagination-info">3 / 78</span>
           <button className="pagination-btn">→</button>
+        </div>
+      </div>
+
+      {/* 이용정보 섹션 */}
+      <div className="usage-info-section">
+        <div className="usage-info-header">
+          <h2>이용정보</h2>
+        </div>
+        
+        <div className="usage-info-tabs">
+          <button className="usage-tab active">상품안내</button>
+          <button className="usage-tab">사용방법</button>
+          <button className="usage-tab">환불규정</button>
+          <button className="usage-tab">이용시간</button>
+        </div>
+
+        <div className="usage-info-content">
+          <div className="usage-info-item">
+            <h3 className="usage-info-title">상품안내</h3>
+            <ul className="usage-info-list">
+              <li>날짜 지정 1일 티켓입니다. 최대 2개월 전부터 입장을 예약할 수 있습니다.</li>
+              <li>타겟 가격은 변동 가격을 기준으로 합니다. 매일 티켓 가격이 달라질 수 있으니 날짜 지정 티켓을 구매하시기 전에 먼저 티켓 가격을 확인해주세요.</li>
+            </ul>
+          </div>
+
+          <div className="usage-info-item">
+            <h3 className="usage-info-title">사용방법</h3>
+            <div className="usage-info-notice">
+              모든 상품은 접수 후 확정이 되면 이용이 가능합니다. 예약 후 내 여행의 사용 방법을 한 번 더 확인해주세요.
+            </div>
+            <ul className="usage-info-list">
+              <li>QR코드 확인 후 입장 가능합니다.</li>
+              <li>사용 가능한 바우처 발급은 확정 후 최대 30분까지 소요될 수 있습니다.</li>
+            </ul>
+          </div>
+
+          <div className="usage-info-item">
+            <h3 className="usage-info-title">환불규정</h3>
+            <ul className="usage-info-list">
+              <li>날짜 지정 1일 티켓입니다. 최대 2개월 전부터 입장을 예약할 수 있습니다.</li>
+              <li>타겟 가격은 변동 가격을 기준으로 합니다. 매일 티켓 가격이 달라질 수 있으니 날짜 지정 티켓을 구매하시기 전에 먼저 티켓 가격을 확인해주세요.</li>
+            </ul>
+          </div>
+
+          <div className="usage-info-item">
+            <h3 className="usage-info-title">이용시간</h3>
+            <ul className="usage-info-list">
+              <li>운영시간 : 12시 30분 ~ 22시 30분</li>
+              <li>문의가능시간 : 12시 30분 ~ 22시 30분</li>
+              <li>휴무일 : 연중무휴</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

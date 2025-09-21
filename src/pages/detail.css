@@ -251,7 +251,7 @@
   
   .product-inquiry-section {
     margin-top: 60px;
-    padding: 40px 0;
+    padding: 40px;
   }
   
   .inquiry-header h2 {
@@ -259,8 +259,9 @@
   }
   
   .inquiry-btn {
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 10px 12px;
+    font-size: 14px;
+    width: 50px;
   }
   
   .search-box input {
@@ -353,7 +354,7 @@
   
   .product-inquiry-section {
     margin-top: 80px;
-    padding: 60px 0;
+    padding: 60px;
   }
   
   .inquiry-header h2 {
@@ -361,8 +362,9 @@
   }
   
   .inquiry-btn {
-    padding: 14px 24px;
-    font-size: 17px;
+    padding: 12px 12px;
+    font-size: 15px;
+    width: 50px;
   }
   
   .search-box input {
@@ -408,7 +410,7 @@
 /* 상품문의 섹션 */
 .product-inquiry-section {
   margin-top: 40px;
-  padding: 24px 0;
+  padding: 30px;
   border-top: 1px solid #eee;
 }
 
@@ -432,15 +434,17 @@
 }
 
 .inquiry-btn {
-  padding: 8px 16px;
+  padding: 8px 12px;
   border: none;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
   background: #f5f5f5;
   color: #666;
+  width: 50px;
+  text-align: center;
 }
 
 .inquiry-btn.active {
@@ -643,7 +647,7 @@
 @media (max-width: 768px) {
   .product-inquiry-section {
     margin-top: 32px;
-    padding: 20px 0;
+    padding: 20px;
   }
   
   .inquiry-header {
@@ -662,8 +666,9 @@
   }
   
   .inquiry-btn {
-    flex: 1;
+    width: 50px;
     text-align: center;
+    flex: none;
   }
   
   .faq-tags {
@@ -697,7 +702,7 @@
 @media (max-width: 480px) {
   .product-inquiry-section {
     margin-top: 24px;
-    padding: 16px 0;
+    padding: 16px;
   }
   
   .inquiry-header h2 {
@@ -705,8 +710,9 @@
   }
   
   .inquiry-btn {
-    padding: 6px 12px;
-    font-size: 13px;
+    padding: 6px 8px;
+    font-size: 11px;
+    width: 50px;
   }
   
   .search-box input {
