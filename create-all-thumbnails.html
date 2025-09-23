@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create All Osaka Thumbnails PNG</title>
+</head>
+<body>
+    <h2>오사카 썸네일 생성기</h2>
+    
+    <div style="margin-bottom: 20px;">
+        <h3>1. 유니버설 스튜디오</h3>
+        <canvas id="canvas1" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+        <br><br>
+        <button onclick="downloadPNG('canvas1', 'universal-studio.png')">유니버설 스튜디오 PNG 다운로드</button>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <h3>2. 오사카 성</h3>
+        <canvas id="canvas2" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+        <br><br>
+        <button onclick="downloadPNG('canvas2', 'osaka-castle.png')">오사카 성 PNG 다운로드</button>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <h3>3. 오사카 수족관</h3>
+        <canvas id="canvas3" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+        <br><br>
+        <button onclick="downloadPNG('canvas3', 'osaka-aquarium.png')">오사카 수족관 PNG 다운로드</button>
+    </div>
+
+    <script>
+        // roundRect 함수 (캔버스에 없어서 추가)
+        CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+            this.beginPath();
+            this.moveTo(x + radius, y);
+            this.lineTo(x + width - radius, y);
+            this.quadraticCurveTo(x + width, y, x + width, y + radius);
+            this.lineTo(x + width, y + height - radius);
+            this.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            this.lineTo(x + radius, y + height);
+            this.quadraticCurveTo(x, y + height, x, y + radius);
+            this.lineTo(x, y + radius);
+            this.quadraticCurveTo(x, y, x + radius, y);
+            this.closePath();
+        };
+
+        // 1. 유니버설 스튜디오
+        const canvas1 = document.getElementById('canvas1');
+        const ctx1 = canvas1.getContext('2d');
+        
+        // 배경
+        ctx1.fillStyle = '#FF6B35';
+        ctx1.fillRect(0, 0, 400, 400);
+        
+        // 구름
+        ctx1.fillStyle = '#FFFFFF';
+        ctx1.beginPath();
+        ctx1.arc(100, 100, 40, 0, 2 * Math.PI);
+        ctx1.arc(120, 100, 35, 0, 2 * Math.PI);
+        ctx1.arc(140, 100, 40, 0, 2 * Math.PI);
+        ctx1.fill();
+        
+        // 롤러코스터
+        ctx1.strokeStyle = '#FFD700';
+        ctx1.lineWidth = 8;
+        ctx1.beginPath();
+        ctx1.moveTo(50, 200);
+        ctx1.quadraticCurveTo(200, 150, 350, 200);
+        ctx1.stroke();
+        
+        // 텍스트
+        ctx1.fillStyle = '#FFFFFF';
+        ctx1.font = 'bold 28px Arial';
+        ctx1.textAlign = 'center';
+        ctx1.fillText('Universal Studio', 200, 300);
+        ctx1.font = 'bold 20px Arial';
+        ctx1.fillText('JAPAN', 200, 330);
+
+        // 2. 오사카 성
+        const canvas2 = document.getElementById('canvas2');
+        const ctx2 = canvas2.getContext('2d');
+        
+        // 배경
+        ctx2.fillStyle = '#87CEEB';
+        ctx2.fillRect(0, 0, 400, 400);
+        
+        // 성
+        ctx2.fillStyle = '#8B4513';
+        ctx2.fillRect(180, 250, 40, 150);
+        ctx2.fillStyle = '#D2691E';
+        ctx2.fillRect(170, 200, 60, 50);
+        ctx2.fillStyle = '#CD853F';
+        ctx2.fillRect(160, 180, 80, 20);
+        
+        // 지붕
+        ctx2.fillStyle = '#8B0000';
+        ctx2.beginPath();
+        ctx2.moveTo(150, 180);
+        ctx2.lineTo(200, 120);
+        ctx2.lineTo(250, 180);
+        ctx2.closePath();
+        ctx2.fill();
+        
+        // 텍스트
+        ctx2.fillStyle = '#8B4513';
+        ctx2.font = 'bold 24px Arial';
+        ctx2.textAlign = 'center';
+        ctx2.fillText('Osaka Castle', 200, 350);
+
+        // 3. 오사카 수족관
+        const canvas3 = document.getElementById('canvas3');
+        const ctx3 = canvas3.getContext('2d');
+        
+        // 배경
+        ctx3.fillStyle = '#E3F2FD';
+        ctx3.fillRect(0, 0, 400, 400);
+        
+        // 수족관 테두리
+        ctx3.fillStyle = '#81C784';
+        ctx3.roundRect(50, 100, 300, 200, 10);
+        ctx3.fill();
+        
+        // 물 영역
+        ctx3.fillStyle = '#4FC3F7';
+        ctx3.roundRect(70, 120, 260, 160, 5);
+        ctx3.fill();
+        
+        // 물고기들
+        ctx3.fillStyle = '#FFB74D';
+        ctx3.beginPath();
+        ctx3.arc(150, 180, 30, 0, 2 * Math.PI);
+        ctx3.fill();
+        
+        ctx3.fillStyle = '#F06292';
+        ctx3.beginPath();
+        ctx3.arc(250, 160, 25, 0, 2 * Math.PI);
+        ctx3.fill();
+        
+        ctx3.fillStyle = '#64B5F6';
+        ctx3.beginPath();
+        ctx3.arc(200, 220, 20, 0, 2 * Math.PI);
+        ctx3.fill();
+        
+        // 해초
+        ctx3.fillStyle = '#8BC34A';
+        ctx3.fillRect(80, 140, 40, 60);
+        ctx3.fillStyle = '#4CAF50';
+        ctx3.fillRect(280, 130, 35, 80);
+        
+        // 텍스트
+        ctx3.fillStyle = '#1976D2';
+        ctx3.font = '24px Arial';
+        ctx3.textAlign = 'center';
+        ctx3.fillText('오사카 수족관', 200, 350);
+
+        function downloadPNG(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
+

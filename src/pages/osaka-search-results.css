@@ -109,7 +109,7 @@
 /* Product Image */
 .osaka-product-image {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 1;
   overflow: hidden;
   position: relative;
 }
@@ -272,55 +272,86 @@
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .osaka-search-results-page {
-    background: #1a1a1a;
-    color: #ffffff;
-  }
-  
-  .osaka-search-header {
-    background: #1a1a1a;
-    border-bottom-color: #333;
-  }
-  
-  .osaka-page-title {
-    color: #ffffff;
-  }
-  
-  .osaka-back-btn, .osaka-menu-btn {
-    color: #ffffff;
-  }
-  
-  .osaka-nav-tabs {
-    background: #1a1a1a;
-    border-bottom-color: #333;
-  }
-  
-  .osaka-nav-tab {
-    color: #ccc;
-  }
-  
-  .osaka-nav-tab.active {
-    color: #4a9eff;
-    border-bottom-color: #4a9eff;
-  }
-  
-  .osaka-recommendation-text {
-    background: #2a2a2a;
-    color: #ccc;
-  }
-  
-  .osaka-product-card {
-    background: #2a2a2a;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .osaka-product-title {
-    color: #ffffff;
-  }
-  
-  .osaka-feature-badge {
-    background: #3a3a3a;
-    color: #ccc;
-  }
+.osaka-search-results-page.dark {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.osaka-search-results-page.dark .osaka-search-header {
+  background: #1a1a1a;
+  border-bottom-color: #333;
+}
+
+.osaka-search-results-page.dark .osaka-page-title {
+  color: #ffffff;
+}
+
+.osaka-search-results-page.dark .osaka-back-btn, 
+.osaka-search-results-page.dark .osaka-menu-btn {
+  color: #ffffff;
+}
+
+.osaka-search-results-page.dark .osaka-nav-tabs {
+  background: #1a1a1a;
+  border-bottom-color: #333;
+}
+
+.osaka-search-results-page.dark .osaka-nav-tab {
+  color: #ccc;
+}
+
+.osaka-search-results-page.dark .osaka-nav-tab.active {
+  color: #4a9eff;
+  border-bottom-color: #4a9eff;
+}
+
+.osaka-search-results-page.dark .osaka-recommendation-text {
+  background: #2a2a2a;
+  color: #ccc;
+}
+
+.osaka-search-results-page.dark .osaka-product-card {
+  background: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.osaka-search-results-page.dark .osaka-product-title {
+  color: #ffffff;
+}
+
+.osaka-search-results-page.dark .osaka-feature-badge {
+  background: #3a3a3a;
+  color: #ccc;
+}
+
+.osaka-search-results-page.dark .osaka-product-category {
+  color: #aaa;
+}
+
+.osaka-search-results-page.dark .osaka-rating-text {
+  color: #ccc;
+}
+
+.osaka-search-results-page.dark .osaka-selection-count {
+  color: #aaa;
+}
+
+.osaka-search-results-page.dark .osaka-price {
+  color: #4a9eff;
+}
+
+.osaka-search-results-page.dark .osaka-promotion-banner {
+  background: linear-gradient(135deg, #ff8c42, #ffa366);
+  color: #1a1a1a;
+}
+
+.osaka-search-results-page.dark .osaka-product-card.loading {
+  background: linear-gradient(90deg, #3a3a3a 25%, #4a4a4a 50%, #3a3a3a 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.osaka-search-results-page.dark .osaka-back-btn:hover, 
+.osaka-search-results-page.dark .osaka-menu-btn:hover {
+  background-color: #333;
 }

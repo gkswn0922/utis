@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTheme } from '../contexts/ThemeContext'
 import './osaka-search-results.css'
 
 function OsakaSearchResults() {
   const navigate = useNavigate()
+  const { theme } = useTheme()
   const [activeTab, setActiveTab] = useState('전체')
 
   const tabs = ['전체', '티켓', 'eSIM', '대중교통', '여행 용품']
 
   const universalStudioProduct = {
     id: 1,
-    image: '/api/placeholder/400/300',
+    image: '/src/assets/universal-studio.PNG',
     category: '티켓 • 오사카',
     title: '오사카 유니버설 스튜디오 재팬 입장권',
     features: ['오늘부터 이용 가능', '예약 즉시 확정'],
@@ -23,7 +25,7 @@ function OsakaSearchResults() {
 
   const osakaCastleProduct = {
     id: 2,
-    image: '/api/placeholder/400/300',
+    image: '/src/assets/osaka-castle.PNG',
     category: '티켓 • 오사카',
     title: '오사카 성 입장권',
     features: ['오늘부터 이용 가능', '예약 즉시 확정'],
@@ -34,10 +36,23 @@ function OsakaSearchResults() {
     price: '₩ 45,000 부터'
   }
 
-  const products = [universalStudioProduct, osakaCastleProduct]
+  const osakaAquariumProduct = {
+    id: 3,
+    image: '/src/assets/osaka-aquarium.PNG',
+    category: '티켓 • 오사카',
+    title: '오사카 수족관 입장권',
+    features: ['오늘부터 이용 가능', '예약 즉시 확정'],
+    promotion: '지금 구매시 10% 할인',
+    rating: 4.6,
+    reviewCount: 32156,
+    selectionCount: '1.5M+',
+    price: '₩ 35,000 부터'
+  }
+
+  const products = [universalStudioProduct, osakaCastleProduct, osakaAquariumProduct]
 
   return (
-    <div className="osaka-search-results-page">
+    <div className={`osaka-search-results-page ${theme}`}>
       {/* Header */}
       <div className="osaka-search-header">
         <button className="osaka-back-btn" onClick={() => navigate(-1)}>

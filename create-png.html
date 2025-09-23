@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Osaka Thumbnails PNG</title>
+</head>
+<body>
+    <h2>오사카 썸네일 생성기</h2>
+    
+    <div style="margin-bottom: 20px;">
+        <h3>1. 유니버설 스튜디오</h3>
+        <canvas id="canvas1" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+        <br><br>
+        <button onclick="downloadPNG('canvas1', 'universal-studio.png')">유니버설 스튜디오 PNG 다운로드</button>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <h3>2. 오사카 성</h3>
+        <canvas id="canvas2" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+        <br><br>
+        <button onclick="downloadPNG('canvas2', 'osaka-castle.png')">오사카 성 PNG 다운로드</button>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <h3>3. 오사카 수족관</h3>
+        <canvas id="canvas3" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+        <br><br>
+        <button onclick="downloadPNG('canvas3', 'osaka-aquarium.png')">오사카 수족관 PNG 다운로드</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // 배경
+        ctx.fillStyle = '#E3F2FD';
+        ctx.fillRect(0, 0, 400, 400);
+
+        // 수족관 테두리
+        ctx.fillStyle = '#81C784';
+        ctx.roundRect(50, 100, 300, 200, 10);
+        ctx.fill();
+
+        // 물 영역
+        ctx.fillStyle = '#4FC3F7';
+        ctx.roundRect(70, 120, 260, 160, 5);
+        ctx.fill();
+
+        // 물고기들
+        ctx.fillStyle = '#FFB74D';
+        ctx.beginPath();
+        ctx.arc(150, 180, 30, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.fillStyle = '#F06292';
+        ctx.beginPath();
+        ctx.arc(250, 160, 25, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.fillStyle = '#64B5F6';
+        ctx.beginPath();
+        ctx.arc(200, 220, 20, 0, 2 * Math.PI);
+        ctx.fill();
+
+        // 해초
+        ctx.fillStyle = '#8BC34A';
+        ctx.fillRect(80, 140, 40, 60);
+
+        ctx.fillStyle = '#4CAF50';
+        ctx.fillRect(280, 130, 35, 80);
+
+        // 텍스트
+        ctx.fillStyle = '#1976D2';
+        ctx.font = '24px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('오사카 수족관', 200, 350);
+
+        // roundRect 함수 (캔버스에 없어서 추가)
+        CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+            this.beginPath();
+            this.moveTo(x + radius, y);
+            this.lineTo(x + width - radius, y);
+            this.quadraticCurveTo(x + width, y, x + width, y + radius);
+            this.lineTo(x + width, y + height - radius);
+            this.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            this.lineTo(x + radius, y + height);
+            this.quadraticCurveTo(x, y + height, x, y + height - radius);
+            this.lineTo(x, y + radius);
+            this.quadraticCurveTo(x, y, x + radius, y);
+            this.closePath();
+        };
+
+        function downloadPNG() {
+            const link = document.createElement('a');
+            link.download = 'osaka-aquarium.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
